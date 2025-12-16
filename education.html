@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education | Aniq Nasrulhaq</title>
+    <link rel="stylesheet" href="styles-education.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header>
+    <nav>
+        <h2 class="logo">ANIQ NASRULHAQ</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutme.html">About</a></li>
+            <li><a class="active" href="education.html">Education</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="family.html">Family</a></li>
+            <li><a href="favourite.html">Favourite</a></li>
+            <li><a href="friends.html">Friends</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- HEADER -->
+<section class="edu-header">
+    <h1>My <span>Education</span> Journey</h1>
+    <p>Here is the timeline of my academic path and achievements.</p>
+</section>
+
+<!-- TIMELINE SECTION -->
+<section class="timeline">
+    <div class="timeline-line"></div>
+
+    <!-- UiTM -->
+    <div class="timeline-item left">
+        <div class="content">
+            <img class="edu-img" src="images/uitm.jpg" alt="UiTM">
+            <h2>UiTM Machang</h2>
+            <h3>Diploma in Information Management</h3>
+            <p class="year">2023 – Present</p>
+            <ul>
+                <li>Learning web development fundamentals (HTML, CSS)</li>
+                <li>Database & records management</li>
+                <li>Information retrieval & digital library skills</li>
+                <li>Active in Badminton & Silat tournament</li>
+                <li>Active in class presentations & clubs</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- High School -->
+    <div class="timeline-item right">
+        <div class="content">
+            <img class="edu-img" src="images/secondary.jpg" alt="Secondary School">
+            <h2>Secondary School</h2>
+            <h3>SPM | Sekolah Kebangsaan Kampong Chengal</h3>
+            <p class="year">2018 – 2022</p>
+            <ul>
+                <li>Active in badminton club</li>
+                <li>Participated in school events</li>
+                <li>Strong teamwork & leadership skills</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Primary -->
+    <div class="timeline-item left">
+        <div class="content">
+            <img class="edu-img" src="images/primary.jpg" alt="Primary School">
+            <h2>Primary School</h2>
+            <h3>Sekolah Kebangsaan Kuang (grade1-grade5)</h3>
+            <p class="year">2013 - 2016</p>
+            <h3>Sekolah Kebangsaan Sri Ketereh (grade5-grade6)</h3>
+            <p class="year">2016 - 2017</p>
+            <ul>
+                <li>Joined many school programs</li>
+                <li>Leader of the kompang club</li>
+                <li>Class leader for 3 years</li>
+            </ul>
+        </div>
+    </div>
+
+</section>
+
+<!-- FOOTER SECTION HITAM -->
+<section class="footer-section">
+    <div class="footer-content">
+        <p>© 2025 Aniq Nasrulhaq | All Rights Reserved</p>
+        <p id="footer-time"></p>
+    </div>
+</section>
+
+<!-- JAVASCRIPT: LIVE TIME -->
+<script>
+    function updateTime() {
+        const now = new Date();
+        const time = now.toLocaleTimeString('en-GB');
+        const date = now.toLocaleDateString('en-GB');
+        document.getElementById("footer-time").innerText = `🕒 ${time} | 📅 ${date}`;
+    }
+    updateTime();
+    setInterval(updateTime, 1000);
+</script>
+
+</body>
+</html>

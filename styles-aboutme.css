@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(120deg, grey 0%, #0d0d0d 60%, #001a00 100%);
+    color:#fff;
+}
+
+/* NAVBAR */
+nav{
+    width:100%;
+    padding:20px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    top:0;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(8px);
+    z-index:100;
+}
+
+nav .logo{
+    color: yellowgreen;
+    font-size:24px;
+    font-weight:700;
+    text-shadow:0 0 10px yellowgreen;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#fff;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active{
+    color: yellowgreen;
+    text-shadow:0 0 10px yellowgreen;
+}
+
+/* PAGE HEADER */
+.main-header{
+    text-align:center;
+    padding:150px 20px 50px 20px;
+}
+
+.main-header h1{
+    font-size:50px;
+    color: yellowgreen;
+    text-shadow:0 0 15px yellowgreen;
+}
+
+.main-header p{
+    font-size:18px;
+    color:#d0ffb8;
+}
+
+/* INFO GRID */
+.info-grid{
+    display:grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap:30px;
+    max-width:1000px;
+    margin:50px auto;
+    padding:0 20px;
+    align-items:center;
+}
+
+.info-card{
+    background: rgba(255,255,255,0.05);
+    padding:20px;
+    border-radius:15px;
+    border:1px solid rgba(154,205,50,0.4);
+    box-shadow:0 0 20px rgba(154,205,50,0.15);
+    text-align:center;
+    transition:0.3s;
+}
+
+.info-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 25px yellowgreen;
+    border-color: yellowgreen;
+}
+
+.info-card h3{
+    color: yellowgreen;
+    margin-bottom:10px;
+    text-shadow:0 0 10px yellowgreen;
+}
+
+.info-card p{
+    color:#d0ffb8;
+    margin-bottom:15px;
+}
+
+/* PROFILE PICTURE + INTRO */
+.profile-section{
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
+}
+
+.profile-section .profile-img{
+    width:150px;
+    height:150px;
+    object-fit:cover;
+    border-radius:50%;
+    border:3px solid yellowgreen;
+    box-shadow: 0 0 20px yellowgreen;
+}
+
+.profile-section .intro-box{
+    background: rgba(0, 100, 0, 0.2);
+    padding:20px;
+    border-radius:15px;
+    border:2px solid yellowgreen;
+    box-shadow: 0 0 20px yellowgreen;
+    max-width:400px;
+}
+
+.profile-section .intro-box h2{
+    color: yellowgreen;
+    font-size:24px;
+    margin-bottom:10px;
+    text-shadow:0 0 10px yellowgreen;
+}
+
+.profile-section .intro-box p{
+    color:#d0ffb8;
+    font-size:15px;
+}
+
+/* SOCIAL ICONS */
+.social-icons{
+    margin-top:15px;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+}
+
+.social-icons a{
+    display:inline-block;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background: rgba(0,0,0,0.3);
+    border:2px solid yellowgreen;
+    box-shadow: 0 0 15px yellowgreen;
+    transition: 0.3s;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.social-icons a img{
+    width:24px;
+    height:24px;
+}
+
+.social-icons a:hover{
+    transform:scale(1.15);
+    box-shadow: 0 0 25px yellowgreen;
+    border-color: yellowgreen;
+    background: rgba(0,100,0,0.5);
+}
+
+/* FUN FACT */
+.fun-fact{
+    max-width:1000px;
+    margin:50px auto 100px;
+    background: rgba(255,255,255,0.05);
+    padding:20px;
+    border-radius:15px;
+    border:1px solid rgba(154,205,50,0.4);
+    text-align:center;
+}
+
+.fun-fact h2{
+    color: yellowgreen;
+    margin-bottom:10px;
+    text-shadow:0 0 10px yellowgreen;
+}
+
+.fun-fact p{
+    color:#d0ffb8;
+    font-size:16px;
+}
+
+/* FOOTER */
+.footer-section{
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 25px 10px;
+    border-top: 1px solid rgba(154,205,50,0.3);
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.footer-section p{
+    margin: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 850px){
+    .info-grid{
+        grid-template-columns:1fr;
+        gap:20px;
+        padding:0 10px;
+    }
+
+    .profile-section .intro-box{
+        max-width:100%;
+    }
+}

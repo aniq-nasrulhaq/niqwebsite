@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Experience | Aniq Nasrulhaq</title>
+<link rel="stylesheet" href="styles-experience.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header>
+<nav>
+<h2 class="logo">ANIQ NASRULHAQ</h2>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="aboutme.html">About</a></li>
+<li><a href="education.html">Education</a></li>
+<li><a class="active" href="experience.html">Experience</a></li>
+<li><a href="family.html">Family</a></li>
+<li><a href="favourite.html">Favourite</a></li>
+<li><a href="friends.html">Friends</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+</ul>
+</nav>
+</header>
+
+<!-- HEADER -->
+<section class="exp-header">
+<h1>My <span>Life Experience</span></h1>
+<p>Moments that shaped my journey</p>
+</section>
+
+<!-- EXPERIENCE TABLE -->
+<section class="exp-section">
+
+<table class="exp-table">
+<thead>
+<tr>
+<th>Gallery</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr class="fade-slide">
+<td>
+<div class="slider smooth-slider">
+<div class="slider-wrapper">
+<img src="images/badminton1.jpg" onclick="openModal(this)">
+<img src="images/badminton2.jpg" onclick="openModal(this)">
+<img src="images/badminton3.jpg" onclick="openModal(this)">
+</div>
+</div>
+</td>
+<td class="type">🏸 Badminton</td>
+<td>
+<p class="year">2018 – Present</p>
+<ul>
+<li>Improved stamina & focus</li>
+<li>Built teamwork, news friend & discipline</li>
+<li>Active in competitions</li>
+</ul>
+</td>
+</tr>
+
+<tr class="fade-slide">
+<td>
+<div class="slider smooth-slider">
+<div class="slider-wrapper">
+<img src="images/silat1.jpg" onclick="openModal(this)">
+<img src="images/silat2.jpg" onclick="openModal(this)">
+<img src="images/silat3.jpg" onclick="openModal(this)">
+</div>
+</div>
+</td>
+<td class="type">🥋 Silat</td>
+<td>
+<p class="year">2024 – Present</p>
+<ul>
+<li>Test mental & physical strength</li>
+<li>Self-discipline</li>
+<li>Respect & patience in sparring</li>
+</ul>
+</td>
+</tr>
+
+<tr class="fade-slide">
+<td>
+<div class="slider smooth-slider">
+<div class="slider-wrapper">
+<img src="images/hiking1.jpg" onclick="openModal(this)">
+<img src="images/hiking2.jpg" onclick="openModal(this)">
+<img src="images/hiking3.jpg" onclick="openModal(this)">
+</div>
+</div>
+</td>
+<td class="type">⛰️ Hiking</td>
+<td>
+<p class="year">2023 – Present</p>
+<ul>
+<li>Explore the nature</li>
+<li>Team building</li>
+<li>Stress relief</li>
+</ul>
+</td>
+</tr>
+
+<tr class="fade-slide">
+<td>
+<div class="slider smooth-slider">
+<div class="slider-wrapper">
+<img src="images/penang1.jpg" onclick="openModal(this)">
+<img src="images/penang2.jpg" onclick="openModal(this)">
+<img src="images/penang3.jpg" onclick="openModal(this)">
+</div>
+</div>
+</td>
+<td class="type">🌆 Backpacker (Penang)</td>
+<td>
+<p class="year">2025</p>
+<ul>
+<li>Heritage exploration</li>
+<li>Local food experience</li>
+<li>Independence</li>
+</ul>
+</td>
+</tr>
+
+<tr class="fade-slide">
+<td>
+<div class="slider smooth-slider">
+<div class="slider-wrapper">
+<img src="images/umrah1.jpg" onclick="openModal(this)">
+<img src="images/umrah2.jpg" onclick="openModal(this)">
+<img src="images/umrah3.jpg" onclick="openModal(this)">
+</div>
+</div>
+</td>
+<td class="type">🕋 Umrah</td>
+<td>
+<p class="year">2019</p>
+<ul>
+<li>Spiritual journey</li>
+<li>Faith strengthening</li>
+<li>Self reflection</li>
+</ul>
+</td>
+</tr>
+
+</tbody>
+</table>
+
+</section>
+
+<!-- FOOTER -->
+<section class="footer-section">
+<p>© 2025 Aniq Nasrulhaq | All Rights Reserved</p>
+<p id="footer-time"></p>
+</section>
+
+<!-- MODAL -->
+<div id="imgModal" class="modal">
+<span class="close" onclick="closeModal()">×</span>
+<img id="modalImg" class="modal-content">
+</div>
+
+<!-- JAVASCRIPT -->
+<script>
+/* FOOTER TIME */
+function updateTime(){
+const now = new Date();
+document.getElementById("footer-time").innerHTML =
+"🕒 " + now.toLocaleTimeString("en-GB") +
+" | 📅 " + now.toLocaleDateString("en-GB");
+}
+updateTime(); setInterval(updateTime,1000);
+
+/* OPTION 2 - SLIDE IN/OUT */
+document.querySelectorAll(".smooth-slider").forEach(slider=>{
+const wrap = slider.querySelector(".slider-wrapper");
+const slides = wrap.children;
+let index = 0;
+
+setInterval(()=>{
+wrap.style.transition = "transform 1s ease";
+wrap.style.transform = `translateX(-${index * 100}%)`;
+index = (index + 1) % slides.length;
+}, 3000);
+});
+
+/* MODAL */
+function openModal(img){
+document.getElementById("imgModal").style.display="flex";
+document.getElementById("modalImg").src = img.src;
+}
+function closeModal(){
+document.getElementById("imgModal").style.display="none";
+}
+</script>
+
+</body>
+</html>

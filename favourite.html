@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Favourite | Aniq Nasrulhaq</title>
+<link rel="stylesheet" href="styles-favourite.css">
+</head>
+<body>
+<header>
+    <nav>
+        <h2 class="logo">ANIQ NASRULHAQ</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutme.html">About</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="family.html">Family</a></li>
+            <li><a class="active" href="favourite.html">Favourite</a></li>
+            <li><a href="friends.html">Friends</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="main-header">
+    <h1>My Favourite</h1>
+    <p>Things and hobbies I love the most.</p>
+</section>
+
+<section class="favorite-wrapper">
+
+<!-- FOOD CARD -->
+<div class="favorite-card">
+  <h2>Food</h2>
+  <div class="slider-container" id="food-slider">
+    <img src="images/food1.jpg" alt="Food 1" class="slider-img visible">
+    <img src="images/food2.jpg" alt="Food 2" class="slider-img">
+    <img src="images/food3.jpg" alt="Food 3" class="slider-img">
+    <img src="images/food4.jpg" alt="Food 4" class="slider-img">
+  </div>
+  <p>My favorite foods include Char kuew tiaw, sushi, takoyaki and buttermilk rice. I love trying new cuisines whenever I can with the right people.</p>
+</div>
+
+<!-- MUSIC CARD -->
+<div class="favorite-card music-card">
+  <img src="images/music.jpg" alt="Music" class="music-img">
+  <h2>Music (1991)</h2>
+  <p>I like listening to cheerful and relaxing music like 1991 songs while studying. It makes me calmer, especially when doing assignments.</p>
+  <div class="music-player">
+      <audio id="audio1991" src="audio/1991.mp3"></audio>
+      <div class="controls">
+          <button id="playBtn">▶️</button>
+          <span id="currentTime">0:00</span>
+          <input type="range" id="progressBar" value="0" min="0" max="100">
+          <span id="duration">0:00</span>
+      </div>
+  </div>
+</div>
+
+<!-- DRINK CARD -->
+<div class="favorite-card">
+  <h2>Drink</h2>
+  <div class="slider-container" id="drink-slider">
+    <img src="images/drink1.jpg" alt="Drink 1" class="slider-img visible">
+    <img src="images/drink2.jpg" alt="Drink 2" class="slider-img">
+    <img src="images/drink3.jpg" alt="Drink 3" class="slider-img">
+    <img src="images/drink4.jpg" alt="Drink 4" class="slider-img">
+  </div>
+  <p>I like coffee, fruit juice and herbal tea. Drinking them keeps me energized for strenuous activities like playing badminton.</p>
+</div>
+
+<!-- HOBBY CARD 1 -->
+<div class="favorite-card">
+  <img src="images/hobby1.jpg" alt="Hobby 1">
+  <h2>Hobby 1</h2>
+  <p>Playing badminton is my main hobby. It keeps my mind active and allows me to build a healthy circle and make new friends.</p>
+  <video width="250" controls>
+    <source src="videos/hobby1.mp4" type="video/mp4">
+    Your browser does not support HTML video.
+  </video>
+</div>
+
+<!-- PLACE CARD -->
+<div class="favorite-card">
+  <h2>Place</h2>
+  <div class="slider-container" id="place-slider">
+    <img src="images/place1.jpg" alt="Place 1" class="slider-img visible">
+    <img src="images/place2.jpg" alt="Place 2" class="slider-img">
+    <img src="images/place3.jpg" alt="Place 3" class="slider-img">
+    <img src="images/place4.jpg" alt="Place 4" class="slider-img">
+    <img src="images/place5.jpg" alt="Place 5" class="slider-img">
+    <img src="images/place6.jpg" alt="Place 6" class="slider-img">
+    <img src="images/place7.jpg" alt="Place 7" class="slider-img">
+    <img src="images/place8.jpg" alt="Place 8" class="slider-img">
+    <img src="images/place9.jpg" alt="Place 9" class="slider-img">
+    <img src="images/place10.jpg" alt="Place 10" class="slider-img">
+    <img src="images/place11.jpg" alt="Place 11" class="slider-img">
+  </div>
+  <p>Natural places like beaches, forests and mountains are my favorite places to relax and refresh my brain. It also helps me to have some me time.</p>
+    <video width="250" controls>
+    <source src="videos/place.mp4" type="video/mp4">
+    Your browser does not support HTML video.
+  </video>
+</div>
+
+<!-- HOBBY CARD 2 -->
+<div class="favorite-card">
+  <img src="images/hobby2.jpg" alt="Hobby 2">
+  <h2>Hobby 2</h2>
+  <p>Silat is my passion after badminton because it makes me more physically fit. It also tests my stamina when I sparring.</p>
+  <video width="250" controls>
+    <source src="videos/hobby2.mp4" type="video/mp4">
+    Your browser does not support HTML video.
+  </video>
+</div>
+
+<!-- MOVIE CARD -->
+<div class="favorite-card">
+  <img src="images/movie.jpg" alt="Movie">
+  <h2>Movie</h2>
+  <p>I like movies that give me creativity and excitement, my favorite genres are fantasy, adventure, and action, for example Narnia</p>
+</div>
+
+<!-- GAME CARD -->
+<div class="favorite-card">
+  <img src="images/game.jpg" alt="Game">
+  <h2>Game</h2>
+  <p>Playing game like strategy and action games helps me relax and challenge my mind, for example Mobile Legends</p>
+</div>
+
+<!-- CAR CARD -->
+<div class="favorite-card">
+  <img src="images/car.jpg" alt="Car">
+  <h2>Car</h2>
+  <p>I love classic cars and the design of modern supercars. Cars are a mix of art and engineering.</p>
+</div>
+
+</section>
+
+<!-- FOOTER -->
+<section class="footer-section">
+  <div class="footer-content">
+      <p>© 2025 Aniq Nasrulhaq | All Rights Reserved</p>
+      <p id="footer-time"></p>
+  </div>
+</section>
+
+<!-- FULLSCREEN MODAL -->
+<div id="fullscreen-modal">
+  <span id="close-modal">&times;</span>
+  <img id="modal-img" src="">
+</div>
+
+<script>
+// Live Time
+function updateTime() {
+    const now = new Date();
+    const time = now.toLocaleTimeString('en-GB');
+    const date = now.toLocaleDateString('en-GB');
+    document.getElementById("footer-time").innerText = `🕒 ${time} | 📅 ${date}`;
+}
+updateTime();
+setInterval(updateTime, 1000);
+
+// Slider Function
+function initSlider(sliderId){
+  const slider = document.getElementById(sliderId);
+  const images = slider.querySelectorAll('.slider-img');
+  let current = 0;
+
+  setInterval(() => {
+    images[current].classList.remove('visible');
+    current = (current + 1) % images.length;
+    images[current].classList.add('visible');
+  }, 3000);
+
+  images.forEach(img => {
+    img.addEventListener('click', () => openFullscreen(img.src));
+  });
+}
+
+initSlider('food-slider');
+initSlider('drink-slider');
+initSlider('place-slider');
+
+// Fullscreen Modal
+const modal = document.getElementById('fullscreen-modal');
+function openFullscreen(src){
+  document.getElementById('modal-img').src = src;
+  modal.style.display = 'flex';
+}
+document.getElementById('close-modal').onclick = () => { modal.style.display = 'none'; }
+modal.onclick = (e) => { if(e.target === modal) modal.style.display = 'none'; }
+
+// Music Player
+const audio = document.getElementById('audio1991');
+const playBtn = document.getElementById('playBtn');
+const progressBar = document.getElementById('progressBar');
+const currentTimeEl = document.getElementById('currentTime');
+const durationEl = document.getElementById('duration');
+
+audio.addEventListener('loadedmetadata', () => {
+    progressBar.max = Math.floor(audio.duration);
+    durationEl.textContent = formatTime(audio.duration);
+});
+
+playBtn.addEventListener('click', () => {
+    if(audio.paused){
+        audio.play();
+        playBtn.textContent = "⏸️";
+    } else {
+        audio.pause();
+        playBtn.textContent = "▶️";
+    }
+});
+
+audio.addEventListener('timeupdate', () => {
+    progressBar.value = Math.floor(audio.currentTime);
+    currentTimeEl.textContent = formatTime(audio.currentTime);
+});
+
+progressBar.addEventListener('input', () => {
+    audio.currentTime = progressBar.value;
+});
+
+function formatTime(sec){
+    const minutes = Math.floor(sec / 60);
+    const seconds = Math.floor(sec % 60);
+    return `${minutes}:${seconds < 10 ? '0'+seconds : seconds}`;
+}
+</script>
+</body>
+</html>

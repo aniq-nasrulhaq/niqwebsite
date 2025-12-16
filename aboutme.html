@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me | Aniq Nasrulhaq</title>
+  <link rel="stylesheet" href="styles-aboutme.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header>
+    <nav>
+        <h2 class="logo">NIQ PERSONAL WEBSITE</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a class="active" href="aboutme.html">About</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="family.html">Family</a></li>
+            <li><a href="favourite.html">Favourite</a></li>
+            <li><a href="friends.html">Friends</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- PAGE HEADER -->
+<section class="main-header">
+    <h1>About Me</h1>
+    <p>Learn more about who I am, my passions, and what drives me.</p>
+</section>
+
+<!-- INFO GRID -->
+<section class="info-grid">
+
+    <!-- Kiri: Umur/Tinggi/Berat -->
+    <div class="info-card">
+        <h3>Age</h3>
+        <p>20</p>
+        <h3>Height</h3>
+        <p>180 cm</p>
+        <h3>Weight</h3>
+        <p>65 kg</p>
+    </div>
+
+    <!-- Tengah: Profile + Kotak Hello + Instagram -->
+    <div class="profile-section">
+        <img class="profile-img" src="images/profile.jpg" alt="Aniq Nasrulhaq">
+        <div class="intro-box">
+            <h2>Hello! I'm</h2>
+            <h2>Aniq Nasrulhaq Bin Mohd Arifin</h2>
+            <p>I am a student at UiTM Machang, passionate about web design, coding, and digital creativity.</p>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/niq_nsrul" target="_blank" class="instagram">
+                <img src="images/instagram-icon.png" alt="Instagram">
+            </a>
+        </div>
+    </div>
+
+    <!-- Kanan: Lahir/Tinggal/Adik-Beradik -->
+    <div class="info-card">
+        <h3>Born</h3>
+        <p>2005</p>
+        <h3>Stay</h3>
+        <p>Ketereh, Kelantan</p>
+        <h3>Number of Siblings</h3>
+        <p>4</p>
+    </div>
+
+</section>
+
+<!-- FUN FACT -->
+<section class="fun-fact">
+    <h2>Fun Fact</h2>
+    <p>I like to play badminton and explore new places like the beach for healing in my free time</p>
+</section>
+
+<!-- FOOTER SECTION -->
+<section class="footer-section">
+    <div class="footer-content">
+        <p>© 2025 Aniq Nasrulhaq | All Rights Reserved</p>
+        <p id="footer-time"></p>
+    </div>
+</section>
+
+<!-- JAVASCRIPT: LIVE TIME -->
+<script>
+    function updateTime() {
+        const now = new Date();
+        const time = now.toLocaleTimeString('en-GB');
+        const date = now.toLocaleDateString('en-GB');
+        document.getElementById("footer-time").innerText = `🕒 ${time} | 📅 ${date}`;
+    }
+    updateTime();
+    setInterval(updateTime, 1000);
+</script>
+</body>
+</html>

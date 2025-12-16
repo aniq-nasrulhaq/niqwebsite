@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | Aniq Nasrulhaq</title>
+  <link rel="stylesheet" href="styles-gallery.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header>
+    <nav>
+        <h2 class="logo">ANIQ NASRULHAQ</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutme.html">About</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="family.html">Family</a></li>
+            <li><a href="favourite.html">Favourite</a></li>
+            <li><a href="friends.html">Friends</a></li>
+            <li><a class="active" href="gallery.html">Gallery</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- PAGE HEADER -->
+<section class="main-header">
+    <h1>Gallery</h1>
+    <p>Some of my favorite moments and memories.</p>
+</section>
+
+<!-- AUTO-SCROLL GALLERY -->
+<div class="scroll-container">
+    <div class="scroll-content">
+        <!-- Images 14 -->
+        <img src="images/g1.jpg" class="scroll-img">
+        <img src="images/g2.jpg" class="scroll-img">
+        <img src="images/g3.jpg" class="scroll-img">
+        <img src="images/g4.jpg" class="scroll-img">
+        <img src="images/g5.jpg" class="scroll-img">
+        <img src="images/g6.jpg" class="scroll-img">
+        <img src="images/g7.jpg" class="scroll-img">
+        <img src="images/g8.jpg" class="scroll-img">
+        <img src="images/g9.jpg" class="scroll-img">
+        <img src="images/g10.jpg" class="scroll-img">
+        <img src="images/g11.jpg" class="scroll-img">
+        <img src="images/g12.jpg" class="scroll-img">
+        <img src="images/g13.jpg" class="scroll-img">
+        <img src="images/g14.jpg" class="scroll-img">
+
+        <!-- Duplicate for seamless scroll -->
+        <img src="images/g1.jpg" class="scroll-img">
+        <img src="images/g2.jpg" class="scroll-img">
+        <img src="images/g3.jpg" class="scroll-img">
+        <img src="images/g4.jpg" class="scroll-img">
+        <img src="images/g5.jpg" class="scroll-img">
+        <img src="images/g6.jpg" class="scroll-img">
+        <img src="images/g7.jpg" class="scroll-img">
+        <img src="images/g8.jpg" class="scroll-img">
+        <img src="images/g9.jpg" class="scroll-img">
+        <img src="images/g10.jpg" class="scroll-img">
+        <img src="images/g11.jpg" class="scroll-img">
+        <img src="images/g12.jpg" class="scroll-img">
+        <img src="images/g13.jpg" class="scroll-img">
+        <img src="images/g14.jpg" class="scroll-img">
+    </div>
+</div>
+
+<!-- FULLSCREEN VIEW -->
+<div id="fullscreen" onclick="closeFullscreen()">
+    <img id="fullscreen-img">
+</div>
+
+<!-- FOOTER SECTION HITAM + LIVE TIME -->
+<section class="footer-section">
+    <div class="footer-content">
+        <p>© 2025 Aniq Nasrulhaq | All Rights Reserved</p>
+        <p id="footer-time"></p>
+    </div>
+</section>
+
+<script>
+// Fullscreen
+function openFullscreen(src){
+    document.getElementById("fullscreen-img").src = src;
+    document.getElementById("fullscreen").style.display = "flex";
+}
+
+function closeFullscreen(){
+    document.getElementById("fullscreen").style.display = "none";
+}
+
+document.querySelectorAll(".scroll-img").forEach(img=>{
+    img.onclick = () => openFullscreen(img.src);
+});
+
+// Footer live time
+function updateTime() {
+    const now = new Date();
+    const time = now.toLocaleTimeString('en-GB');
+    const date = now.toLocaleDateString('en-GB');
+    document.getElementById("footer-time").innerText = `🕒 ${time} | 📅 ${date}`;
+}
+updateTime();
+setInterval(updateTime, 1000);
+</script>
+
+</body>
+</html>

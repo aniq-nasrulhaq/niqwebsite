@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Friends | Aniq Nasrulhaq</title>
+  <link rel="stylesheet" href="styles-friends.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header>
+    <nav>
+        <h2 class="logo">ANIQ NASRULHAQ</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutme.html">About</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="family.html">Family</a></li>
+            <li><a href="favourite.html">Favourite</a></li>
+            <li><a class="active" href="friends.html">Friends</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- PAGE HEADER -->
+<section class="main-header">
+    <h1>My Prenn</h1>
+    <p>People who bring joy, laughter, and support into my life.</p>
+</section>
+
+<!-- ============================ -->
+<!--       SECTION 1: HOUSEMATE  -->
+<!-- ============================ -->
+<section class="section-title">
+    <h2>Housemate</h2>
+</section>
+
+<div class="slider-container right-slide">
+    <div class="slider-track">
+        <!-- ORIGINAL 10 -->
+        <img src="images/f1.jpg">
+        <img src="images/f2.jpg">
+        <img src="images/f3.jpg">
+        <img src="images/f4.jpg">
+        <img src="images/f5.jpg">
+        <img src="images/f6.jpg">
+        <img src="images/f7.jpg">
+        <img src="images/f8.jpg">
+        <img src="images/f9.jpg">
+        <img src="images/f10.jpg">
+        <!-- DUPLICATE 10 -->
+        <img src="images/f1.jpg">
+        <img src="images/f2.jpg">
+        <img src="images/f3.jpg">
+        <img src="images/f4.jpg">
+        <img src="images/f5.jpg">
+        <img src="images/f6.jpg">
+        <img src="images/f7.jpg">
+        <img src="images/f8.jpg">
+        <img src="images/f9.jpg">
+        <img src="images/f10.jpg">
+    </div>
+</div>
+
+<!-- ============================ -->
+<!--       SECTION 2: CLASSMATE  -->
+<!-- ============================ -->
+<section class="section-title">
+    <h2>Classmate</h2>
+</section>
+
+<div class="slider-container left-slide">
+    <div class="slider-track">
+        <!-- ORIGINAL 8 -->
+        <img src="images/c1.jpg">
+        <img src="images/c2.jpg">
+        <img src="images/c3.jpg">
+        <img src="images/c4.jpg">
+        <img src="images/c5.jpg">
+        <img src="images/c6.jpg">
+        <img src="images/c7.jpg">
+        <img src="images/c8.jpg">
+        <!-- DUPLICATE 8 -->
+        <img src="images/c1.jpg">
+        <img src="images/c2.jpg">
+        <img src="images/c3.jpg">
+        <img src="images/c4.jpg">
+        <img src="images/c5.jpg">
+        <img src="images/c6.jpg">
+        <img src="images/c7.jpg">
+        <img src="images/c8.jpg">
+    </div>
+</div>
+
+<!-- ======================================= -->
+<!--   SECTION 3: SECONDARY SCHOOL FRIENDS   -->
+<!-- ======================================= -->
+<section class="section-title">
+    <h2>Secondary School Friends</h2>
+</section>
+
+<div class="slider-container right-slide">
+    <div class="slider-track">
+        <!-- ORIGINAL 4 -->
+        <img src="images/s1.jpg">
+        <img src="images/s2.jpg">
+        <img src="images/s3.jpg">
+        <img src="images/s4.jpg">
+        <!-- DUPLICATE 4 -->
+        <img src="images/s1.jpg">
+        <img src="images/s2.jpg">
+        <img src="images/s3.jpg">
+        <img src="images/s4.jpg">
+    </div>
+</div>
+
+<!-- FULLSCREEN POPUP -->
+<div id="imgPopup" class="popup">
+    <span class="close">&times;</span>
+    <img class="popup-content" id="popupImg">
+</div>
+
+<!-- FOOTER SECTION HITAM + LIVE TIME -->
+<section class="footer-section">
+    <div class="footer-content">
+        <p>© 2025 Aniq Nasrulhaq | All Rights Reserved</p>
+        <p id="footer-time"></p>
+    </div>
+</section>
+
+<!-- JAVASCRIPT -->
+<script>
+// Fullscreen popup
+const popup = document.getElementById("imgPopup");
+const popupImg = document.getElementById("popupImg");
+const closeBtn = document.querySelector(".close");
+
+document.querySelectorAll(".slider-track img").forEach(img => {
+    img.addEventListener("click", () => {
+        popup.style.display = "block";
+        popupImg.src = img.src;
+    });
+});
+
+closeBtn.addEventListener("click", () => popup.style.display = "none");
+popup.addEventListener("click", (e) => {
+    if (e.target === popup) popup.style.display = "none";
+});
+
+// Footer live time
+function updateTime() {
+    const now = new Date();
+    const time = now.toLocaleTimeString('en-GB');
+    const date = now.toLocaleDateString('en-GB');
+    document.getElementById("footer-time").innerText = `🕒 ${time} | 📅 ${date}`;
+}
+updateTime();
+setInterval(updateTime, 1000);
+</script>
+
+</body>
+</html>

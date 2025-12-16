@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Family | Aniq Nasrulhaq</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles-family.css">
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header>
+<nav>
+  <h2 class="logo">ANIQ NASRULHAQ</h2>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="aboutme.html">About</a></li>
+    <li><a href="education.html">Education</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a class="active" href="family.html">Family</a></li>
+    <li><a href="favourite.html">Favourite</a></li>
+    <li><a href="friends.html">Friends</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+  </ul>
+</nav>
+</header>
+
+<!-- HEADER -->
+<section class="main-header">
+  <h1>My Family</h1>
+  <p>The people who inspire and support me every day.</p>
+</section>
+
+<!-- FAMILY SECTION -->
+<section class="family-wrapper">
+
+<!-- FATHER -->
+<div class="flip-card">
+  <div class="flip-inner">
+
+    <!-- FRONT -->
+    <div class="flip-front">
+      <img src="images/father.jpg" alt="Father">
+      <h2>My Father</h2>
+      <p>
+        A responsible, patient person, and always setting the best example in my life,
+        teaching me how to survive.
+      </p>
+    </div>
+
+    <!-- BACK -->
+    <div class="flip-back">
+      <h3>Personal Info</h3>
+      <ul>
+        <li><strong>Name:</strong> Mohd ARIFIN BIN AB-LAH</li>
+        <li><strong>Age:</strong> 50 years old</li>
+        <li><strong>Relationship:</strong> Father</li>
+        <li><strong>Occupation:</strong> Self-employed</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<!-- MOTHER -->
+<div class="flip-card">
+  <div class="flip-inner">
+
+    <div class="flip-front">
+      <img src="images/mother.jpg" alt="Mother">
+      <h2>My Mother</h2>
+      <p>
+        The most loving, gentle person, and always supportive no matter what.
+      </p>
+    </div>
+
+    <div class="flip-back">
+      <h3>Personal Info</h3>
+      <ul>
+        <li><strong>Name:</strong> Norainiah Binti Abdullah</li>
+        <li><strong>Age:</strong> 49 years old</li>
+        <li><strong>Relationship:</strong> Mother</li>
+        <li><strong>Occupation:</strong> Teacher</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<!-- SIBLINGS -->
+<div class="flip-card">
+  <div class="flip-inner">
+
+    <div class="flip-front">
+      <img src="images/siblings.jpg" alt="Siblings">
+      <h2>My Siblings</h2>
+      <p>
+        They were my first friends in life, we built many memories together,
+        laughed together, and supported each other.
+      </p>
+    </div>
+
+    <div class="flip-back">
+      <h3>Personal Info</h3>
+      <ul>
+        <li><strong>Total:</strong> 4 siblings</li>
+        <li><strong>Number in sibling:</strong> 2</li>
+        <li><strong>Relationship:</strong> Brothers & Sisters</li>
+        <li><strong>Favourite Activity:</strong> Play badminton together</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<!-- COUSIN -->
+<div class="flip-card">
+  <div class="flip-inner">
+
+    <div class="flip-front">
+      <img src="images/cousin.jpg" alt="Cousin">
+      <h2>My Cousin</h2>
+      <p>
+        Able to play together since childhood until now, including playing games
+        and traditional village games.
+      </p>
+    </div>
+
+    <div class="flip-back">
+      <h3>Personal Info</h3>
+      <ul>
+        <li><strong>Relationship:</strong> Cousin</li>
+        <li><strong>Age:</strong> 2-23 years old</li>
+        <li><strong>Number of cousins:</strong> 27 (19boy, 8girl)</li>
+        <li><strong>Current Hobby:</strong> Play game together</li>
+        <li><strong>Memories together:</strong> Childhood games</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="footer-section">
+  <p>© 2025 Aniq Nasrulhaq | All Rights Reserved</p>
+  <p id="footer-time"></p>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+  // Live Time
+  function updateTime(){
+    const now = new Date();
+    const hours = now.getHours().toString().padStart(2,'0');
+    const minutes = now.getMinutes().toString().padStart(2,'0');
+    const seconds = now.getSeconds().toString().padStart(2,'0');
+    const date = now.toLocaleDateString('en-GB'); // dd/mm/yyyy
+    document.getElementById("footer-time").innerText = `🕒 ${hours}:${minutes}:${seconds} | 📅 ${date}`;
+  }
+  updateTime();
+  setInterval(updateTime, 1000);
+</script>
+
+</body>
+</html>
